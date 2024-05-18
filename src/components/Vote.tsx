@@ -10,7 +10,8 @@ import { prepareContractCall } from "thirdweb";
 import VoteProgressBars from "./VoteProgressBar";
 const Vote = () => {
   const wallet = useActiveWallet();
-  const currentWalletAddress = wallet?.getAccount()?.address;
+  const currentWalletAddress =
+    wallet?.getAccount()?.address ?? "";
 
   const {
     data: hasVoted,
